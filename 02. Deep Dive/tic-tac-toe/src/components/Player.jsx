@@ -4,14 +4,14 @@ function Player({ name, symbol }) {
     const [isEditing, setIsEditing] = useState(false);
 
     const handleEditClick = function () {
-        setIsEditing(true);
+        setIsEditing(!isEditing);
     };
 
     return (
         <li>
             <span className="player">
                 {isEditing ? (
-                    <input type="text" />
+                    <input type="text" value={name} required />
                 ) : (
                     <span className="player-name">{name}</span>
                 )}
