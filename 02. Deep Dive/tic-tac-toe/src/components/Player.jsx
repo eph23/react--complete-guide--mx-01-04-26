@@ -3,9 +3,9 @@ import { useState } from "react";
 function Player({ name, symbol }) {
     const [isEditing, setIsEditing] = useState(false);
 
-    const handleEditClick = function () {
-        setIsEditing(!isEditing);
-    };
+    function handleEditClick() {
+        setIsEditing((editing) => !editing);
+    }
 
     return (
         <li>
